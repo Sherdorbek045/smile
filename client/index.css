@@ -1,7 +1,16 @@
-
-.div{
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0 auto;
+* {
+    margin: 0;
+    height: 0;
+    
+}
+.bosh {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    
+    height: 100vh;
+}
+.btn{
+    height: 150px;
+    width: 150px;
 }
