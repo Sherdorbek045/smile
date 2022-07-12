@@ -1,0 +1,25 @@
+*{
+    margin: 0;  
+    padding: 0;
+}
+
+
+
+h1{
+    display: inline;
+    text-align: center;
+    height: 30px;
+
+}
+.til{
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    border: solid 1px black;
+    justify-content: space-between;
+    margin-bottom: 0;
+    align-items: flex-start
+}
+.input{
+
+}
