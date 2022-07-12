@@ -3,11 +3,14 @@
     height: 0;
     
 }
+.row{
+    width: 50%;
+    height: 20vh;
+}
 .bosh {
     display: flex;
     margin: auto;
     justify-content: center;
-    
     height: 100vh;
 }
 .btn{
