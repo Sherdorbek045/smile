@@ -133,18 +133,27 @@
 //     ]
 // }
 
-let demo = [{ hello: "salom" }, { world: "dunyo" },{ hello: "salom" }, { world: "dunyo" }];
+let demo = [{ hello: "salom" }, { world: "dunyo" }];
+
+
+
 
 let getObjectElementRandom=demo[Math.floor(Math.random()*demo.length)];
-function pickRandomProperty(obj) {
+
+function pickRandomProperty(obj,which) {
     var result;
     var count = 0;
     for (var prop in obj)
         if (Math.random() < 1/++count)
            result = prop;
-    return result;
+    if(which==0){
+        return result;
+    }  else{
+        return result;
+    }
 }
+
 let getRandomWordElementOne;
-console.log(pickRandomProperty(getObjectElementRandom));
+console.log(pickRandomProperty(getObjectElementRandom,0));
 
 
