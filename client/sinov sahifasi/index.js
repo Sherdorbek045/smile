@@ -1,9 +1,10 @@
-// function cl(...element) {
-//     console.log(String(element))
-// }
-// // Example generator
 
-// // _Random number
+function cl(...element) {
+    console.log(String(element))
+}
+// Example generator
+
+// _Random number
 // const a_number = (start, end) => {
 //     let number = Math.round(Math.random() * (start - end) + end);
 //     return number
@@ -37,41 +38,42 @@
 
 // }
 
-// // Interface changer
+// Interface changer
 
-// // _ Add new p element to dom
-// let addNewP = (full_example, e) => {
-//     let p = document.createElement('p');
-//     p.innerHTML = full_example.split('=')[0] + '=?'
-//     e.parentNode.appendChild(p).setAttribute('class', 'bottom')
-//     document.querySelector('.bottom').setAttribute('key', full_example)
-// }
+// _ Add new p element to dom
+let addNewP = (word) => {
+    let e = document.querySelector('p')
+    let p = document.createElement('p');
+    p.innerHTML = word;
+    e.parentNode.appendChild(p).setAttribute('class', 'bottom')
+    document.querySelector('.bottom')
+}
 
-// // _Example scroller
+// _Example scroller
 
-// let scroller = (full_example) => {
-//     let pies = document.querySelectorAll('p');
-//     pies.forEach((e) => {
-//         let html_class = e.classList[0];
-//         if (html_class == 'top') {
-//             e.removeAttribute('class');
-//             e.setAttribute('class', 'hidden')
-//             e.style.display = 'none'
-//         } else if (html_class == 'center') {
-//             e.removeAttribute('class');
-//             e.setAttribute('class', 'top')
-//             e.innerHTML = e.getAttribute('key')
-//         } else if (html_class == 'bottom') {
-//             e.removeAttribute('class')
-//             e.setAttribute('class', 'center')
-//             addNewP(full_example, e)
-//         }
+let scroller = (word) => {
+    let pies = document.querySelectorAll('p');
+    pies.forEach((e) => {
+        let html_class = e.classList[0];
+        if (html_class == 'top') {
+            e.removeAttribute('class');
+            e.setAttribute('class', 'hidden')
+            e.style.display = 'none'
+        } else if (html_class == 'center') {
+            e.removeAttribute('class');
+            e.setAttribute('class', 'top')
+            e.innerHTML = e.getAttribute('key')
+        } else if (html_class == 'bottom') {
+            e.removeAttribute('class')
+            e.setAttribute('class', 'center')
+            addNewP(word)
+        }
 
-//     })
-//     return true
-// }
+    })
+    return true
+}
 
-// // _Resoult checker
+// _Resoult checker
 // let checker = (resoult) => {
 //     document.querySelectorAll('button').forEach((e) => {
 //         e.addEventListener('click', () => {
@@ -86,7 +88,7 @@
 //     })
 // }
 
-// // _Button text changer
+// _Button text changer
 // let button_setter = (resoult) => {
 //     localStorage.setItem('true_set', Math.round(Math.random() * 4))
 //     let counter = 0;
@@ -104,9 +106,8 @@
 
 // let resoult_getter = () => {
 //     return document.querySelector('.center').getAttribute('key')
-
 // }
-// // Main, controller function
+// Main, controller function
 // let main = () => {
 //     let operator = '+'
 //     if (!document.querySelector('.top')) {
@@ -120,40 +121,26 @@
 // }
 // main()
 
-// let demo = localStorage.getItem('demo');
+const p = {
+    "p1": "value1",
+    "p2": "value2",
+    "p3": "value3"
+};
+let first_languange=[]
+let second_languange=[]
 
-// let demo={
-//     foreign: [
-//         'hello',
-//         'world'
-//     ],
-//     native:[
-//         'salom',
-//         'dunyo'
-//     ]
-// }
-
-let demo = [{ hello: "salom" }, { world: "dunyo" }];
-
-
-
-
-let getObjectElementRandom=demo[Math.floor(Math.random()*demo.length)];
-
-function pickRandomProperty(obj,which) {
-    var result;
-    var count = 0;
-    for (var prop in obj)
-        if (Math.random() < 1/++count)
-           result = prop;
-    if(which==0){
-        return result;
-    }  else{
-        return result;
-    }
+for (let [key, value] of Object.entries(p)) {
+  first_languange.push(key)
+  second_languange.push(value)
 }
+addNewP(first_languange[0])
+scroller(second_languange[0])
 
-let getRandomWordElementOne;
-console.log(pickRandomProperty(getObjectElementRandom,0));
+
+document.addEventListener('click',()=>{
+    addNewP(first_languange[1])
+    scroller(first_languange[0])
+})
+
 
 
