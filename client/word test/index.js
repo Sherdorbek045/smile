@@ -7,7 +7,6 @@ let addNewP = (word) => {
     let p = document.createElement('p');
     p.innerHTML = word;
     e.parentNode.appendChild(p).setAttribute('class', 'bottom')
-    document.querySelector('.bottom').setAttribute('key', full_example)
 }
 
 const p = {
@@ -31,12 +30,12 @@ let getOneWord=()=>{
         dict=second_languange;
     }
     let choice_word=Math.round(Math.random()*((dict.length-1)-0)+0)
-    addNewP(dict[choice_word])
+    scroller(dict[choice_word])
 }
 
 // _Example scroller
 
-let scroller = (full_example) => {
+let scroller = (word) => {
     let pies = document.querySelectorAll('p');
     pies.forEach((e) => {
         let html_class = e.classList[0];
@@ -47,11 +46,10 @@ let scroller = (full_example) => {
         } else if (html_class == 'center') {
             e.removeAttribute('class');
             e.setAttribute('class', 'top')
-            e.innerHTML = e.getAttribute('key')
         } else if (html_class == 'bottom') {
             e.removeAttribute('class')
             e.setAttribute('class', 'center')
-            addNewP(full_example, e)
+            addNewP(word)
         }
 
     })
@@ -59,12 +57,8 @@ let scroller = (full_example) => {
 }
 
 // Main, controller function
-let main = () => {
-    if (!document.querySelector('.top')) {
-        getOneWord()
+let main = () => {        getOneWord()
     }
-    
-}
 
 
 
