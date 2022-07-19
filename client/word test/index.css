@@ -1,11 +1,34 @@
-p{
+p,body {
     padding: 0;
     margin: 0;
 }
+
 .req {
     text-align: center;
     height: 80px;
-    width: 50%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.res {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+.res input{
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: sans-serif;
+    font-weight: 300px;
+    color: black;
+    padding: 2px 5px;
+    font-size: 27px;
+    width: 80%;
+    position: relative;
+    outline: none;
 }
 
 @keyframes toTop {
@@ -31,7 +54,7 @@ p{
 
     to {
         top: 0;
-        font-size:  32px;
+        font-size: 32px;
         opacity: 1;
     }
 }
@@ -55,6 +78,7 @@ p{
         opacity: .3;
     }
 }
+
 .req p {
     opacity: .3;
     position: relative;
@@ -87,7 +111,7 @@ p{
     -webkit-background-clip: text;
 }
 
-.hidden{
+.hidden {
     animation-name: hidden;
     animation-duration: .3s;
     animation-timing-function: linear;
@@ -108,9 +132,18 @@ p{
 }
 
 
-.container{
+.container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+}
+
+.p{
+    display: inline-block;
+    font-weight: bold;
+}
+
+.all{
+    color: limegreen;
 }
