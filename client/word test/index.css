@@ -3,6 +3,14 @@ p,body {
     margin: 0;
 }
 
+body{
+    background-image: url("../custom_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -ms-background-position-x: center;
+    background-position-x: center;
+}
+
 .req {
     text-align: center;
     height: 80px;
@@ -14,21 +22,20 @@ p,body {
 
 .res {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 80px;
 }
 .res input{
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     font-family: sans-serif;
     font-weight: 300px;
-    color: black;
     padding: 2px 5px;
+    width: 100%;
     font-size: 27px;
-    width: 80%;
-    position: relative;
     outline: none;
+    background: transparent;
 }
 
 @keyframes toTop {
@@ -84,7 +91,7 @@ p,body {
     position: relative;
     font-size: 1.2rem;
     font-weight: bold;
-    color: blue;
+    color: white;
 }
 
 .req .center {
@@ -106,7 +113,7 @@ p,body {
     animation-fill-mode: forwards;
     animation-play-state: running;
     color: transparent;
-    background: linear-gradient(0deg, blue, white);
+    background: linear-gradient(0deg, white, transparent);
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -121,7 +128,7 @@ p,body {
 
 .req .bottom {
     color: transparent;
-    background: linear-gradient(180deg, blue, white);
+    background: linear-gradient(180deg, white,transparent);
     background-clip: text;
     -webkit-background-clip: text;
     animation-name: show;
@@ -136,14 +143,4 @@ p,body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
-}
-
-.p{
-    display: inline-block;
-    font-weight: bold;
-}
-
-.all{
-    color: limegreen;
 }
