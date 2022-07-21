@@ -71,7 +71,7 @@ input.addEventListener('input', (e) => {
         correct_res.shift();
         e.target.value = '';
         input.style.borderBottomColor = 'green'
-        document.querySelector('.all').innerHTML=(all+=1)
+        document.querySelector('.text-info').innerHTML=(all+=1)
     } else {
         input.style.borderBottomColor = 'red';
     }
