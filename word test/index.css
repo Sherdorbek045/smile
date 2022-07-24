@@ -1,14 +1,11 @@
 p,body {
-    padding: 0;
-    margin: 0;
+    padding: 0!important;
+    margin: 0!important;
 }
 
 body{
-    background-image: url("../custom_bg.jpg");
-    background-size: cover;
+    background-image: url(https://toprope.com.ua/blog/wp-content/uploads/2018/01/toprope-wallpaper-georgia-1920x1080-01.jpg);
     background-repeat: no-repeat;
-    -ms-background-position-x: center;
-    background-position-x: center;
 }
 
 .req {
@@ -91,7 +88,7 @@ body{
     position: relative;
     font-size: 1.2rem;
     font-weight: bold;
-    color: white;
+    color: blue;
 }
 
 .req .center {
@@ -112,10 +109,7 @@ body{
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-play-state: running;
-    color: transparent;
-    background: linear-gradient(0deg, white, transparent);
-    background-clip: text;
-    -webkit-background-clip: text;
+    color: blue;
 }
 
 .hidden {
@@ -127,16 +121,9 @@ body{
 }
 
 .req .bottom {
-    color: transparent;
-    background: linear-gradient(180deg, white,transparent);
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation-name: show;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-delay: .2s;
-    opacity: 0;
+    color: blue;
 }
+
 
 
 .container {
