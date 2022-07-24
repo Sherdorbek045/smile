@@ -66,7 +66,7 @@ getOneWord()
 let input = document.querySelector('input');
 input.addEventListener('input', (e) => {
     let req = document.querySelector('.center');
-    if (e.target.value == correct_res[req.id]) {
+    if ((e.target.value).toLowerCase() == correct_res[req.id]) {
         getOneWord();
         correct_res.shift();
         e.target.value = '';
