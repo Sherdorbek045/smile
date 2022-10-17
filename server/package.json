@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server for \"smile\" app",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",
