@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APIs of smile</title>
+</head>
+
+<body>
+  <h2>Register</h2>
+  <code>https://localhost:5050/api/users</code>
+  <br>Method: post
+  <p>Form:
+  <pre>
+    body: {
+      name: (required),
+      email: (required),
+      password: (required)
+    }
+  </pre>
+  Response: message (200)
+  </p>
+  <hr>
+  <h2>Login</h2>
+  <code>https://localhost:5050/api/auth</code>
+  <br>Method: post
+  <p>Form:
+  <pre>
+    body: {
+      email: (required),
+      password: (required)
+    }
+  </pre>
+  Response: message (200), data (token)
+  </p>
+  <hr>
+  <h2>Verify</h2>
+  <code>https://localhost:5050/api/users/verify</code>
+  <br>Method: get
+  <p>Form:
+  <pre>
+    headers: {
+      token: (required)
+    }
+  </pre>
+  Response: user (200)
+  </p>
+  <hr>
+  <h2>Delete</h2>
+  <code>https://localhost:5050/api/users/:id</code>
+  <br>Method: delete
+  <p></p>
+  <br>Response: message (200)
+  <hr>
+  <h2>Update</h2>
+  <code>https://localhost:5050/api/users/:id</code>
+  <br>Method: put
+  <p>Form:
+  <pre>
+    headers:{
+      token: (required)
+    }
+    body: {
+      name: (required),
+      email: (required),
+      password: (required)
+    }
+    </pre>
+  Response: message (200)
+  </p>
+  <hr>
+  <h2>Update dictonary</h2>
+  <code>https://localhost:5050/api/users/dictonary/:id</code>
+  <br>Method: put
+  <p>Form:
+  <pre>
+    headers: {
+      token: (required)
+    }
+    body: {
+      {}(dictonary)
+    }
+    </pre>
+  Response: message (200)
+  </p>
+  <hr>
+</body>
+
+</html>

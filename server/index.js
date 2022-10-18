@@ -20,8 +20,7 @@ app.use('/api/auth', authRoutes);
 //listen
 const port = process.env.PORT || 5050;
 app.listen(port,
-  () => console.log(`
-  Server has been 
-started on ${port} port
-`)
-)
+  () => {
+    console.log(`Port: ${port}`);
+    res.sendFile(__dirname + '/index.html');
+  });
